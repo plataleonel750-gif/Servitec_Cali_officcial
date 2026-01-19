@@ -1,0 +1,1036 @@
+/* Reset básico */
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+body {
+font-family: Arial, Helvetica, sans-serif;
+background-color: #fff;
+color: #333;
+}
+/* Altura aproximada actual de tu header fijo (ajusta si cambias paddings) */
+:root {
+    --header-height: 110px;   /* ~36px top-bar + ~74px header (ajusta según tu diseño) */
+}
+
+/* Espacio para que el contenido no quede debajo del header fijo */
+body {
+    padding-top: var(--header-height);
+    /* ... resto de tus estilos ... */
+}
+
+.icono{
+    width: 40px;
+    height: 40px;
+}
+a{
+    display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.info-item {
+    display: flex;
+    flex-direction: column;   /* CLAVE */
+    align-items: center;
+    text-align: center;
+    gap: 8px;                 /* separación icono-texto */
+}
+
+#contacto{
+    color:white
+}
+/* Si prefieres aplicar el espacio a todas las sections */
+
+/* Header fijo debajo de la barra roja */
+header {
+background-color: white;
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 12px 16px;
+box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+position: fixed;
+top: 36px; /* altura aproximada de .top-bar */
+left: 0;
+width: 100%;
+z-index: 999;
+}
+.logo {
+display: flex;
+align-items: center;
+gap: 10px;
+}
+.logo-square {
+background-color: #cc0000;
+color: white;
+font-size: 22px;
+font-weight: bold;
+width: 38px;
+height: 38px;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+.logo-text {
+font-size: 15px;
+font-weight: bold;
+line-height: 1.1;
+}
+/* Menú hamburguesa y navegación mobile */
+.menu-toggle { display: none; }
+.hamburger {
+font-size: 28px;
+cursor: pointer;
+color: #333;
+}
+.mobile-nav {
+display: none;
+position: fixed;
+top: 80px; /* debajo del header */
+left: 0;
+width: 100%;
+background: white;
+padding: 20px;
+box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+z-index: 998;
+}
+.mobile-nav ul {
+list-style: none;
+}
+.mobile-nav a {
+display: block;
+padding: 12px 0;
+color: #333;
+text-decoration: none;
+font-size: 16px;
+}
+#menu-toggle:checked ~ .mobile-nav {
+display: block;
+}
+/* Navegación desktop */
+.desktop-nav {
+display: none;
+}
+
+/* Botón WhatsApp flotante */
+.whatsapp-float {
+position: fixed;
+bottom: 20px;
+right: 20px;
+background-color: #25D366;
+color: white;
+padding: 12px 20px;
+border-radius: 50px;
+text-decoration: none;
+font-weight: bold;
+box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+z-index: 1000;
+display: flex;
+align-items: center;
+gap: 8px;
+font-size: 1rem;
+}
+.whatsapp-float::before {
+content: "💬";
+}
+/* Media Queries */
+@media (min-width: 769px) {
+.top-bar {
+padding: 10px 40px;
+font-size: 15px;
+}
+header {
+padding: 15px 40px;
+top: 42px;
+}
+.logo-square {
+width: 48px;
+height: 48px;
+font-size: 26px;
+}
+.logo-text {
+font-size: 18px;
+}
+.desktop-nav {
+display: flex;
+}
+.desktop-nav ul {
+display: flex;
+list-style: none;
+gap: 28px;
+}
+.desktop-nav a {
+color: #0f2d5e;
+text-decoration: none;
+font-weight: 500;
+}
+.hamburger {
+display: none;
+}
+.hero-section {
+padding: 160px 60px 80px;
+}
+.hero-section h1 {
+font-size: 3.2rem;
+}
+.hero-section p {
+font-size: 1.3rem;
+max-width: 600px;
+}
+.features {
+flex-direction: row;
+flex-wrap: wrap;
+gap: 1.5rem;
+}
+}
+/* Espacio general para header fijo (ajusta según tu top-bar + header) */
+section {
+padding: 120px 20px 80px; /* más espacio arriba y abajo */
+}
+h2 {
+text-align: center;
+font-size: 2.3rem;
+margin-bottom: 3rem; /* más separación debajo del título */
+font-weight: bold;
+}
+
+
+/*secion de sobre nosotros e historia*/
+
+.container {
+            max-width: 100%;
+            padding: 0 15px;
+            margin: 0 auto;
+        }
+
+       
+
+/*foother*/
+footer {
+background: #0f0f0f;
+color: #ccc;
+padding: 60px 20px 30px;
+}
+.footer-container {
+max-width: 1200px;
+margin: 0 auto;
+display: grid;
+grid-template-columns: 1fr;
+gap: 3rem;
+}
+.footer-logo {
+margin-bottom: 1.5rem;
+}
+.footer-logo .logo-square {
+display: inline-block;
+background: #cc0000;
+color: white;
+font-size: 1.8rem;
+font-weight: bold;
+width: 50px;
+height: 50px;
+line-height: 50px;
+text-align: center;
+border-radius: 4px;
+margin-right: 10px;
+}
+.footer-logo-text {
+font-size: 1.4rem;
+font-weight: bold;
+color: white;
+}
+.footer-logo p {
+margin-top: 0.8rem;
+font-size: 0.95rem;
+color: #aaa;
+line-height: 1.5;
+}
+.footer-columns {
+display: grid;
+grid-template-columns: 1fr;
+gap: 2.5rem;
+}
+.footer-col h4 {
+color: white;
+font-size: 1.2rem;
+margin-bottom: 1.2rem;
+font-weight: 600;
+}
+.footer-col ul {
+list-style: none;
+}
+.footer-col li {
+margin-bottom: 0.9rem;
+}
+.footer-col a {
+color: #bbb;
+text-decoration: none;
+font-size: 0.95rem;
+transition: color 0.3s;
+}
+.footer-col a:hover {
+color: #ff4444;
+}
+.footer-contact p {
+font-size: 0.95rem;
+margin-bottom: 0.8rem;
+color: #bbb;
+}
+.footer-contact a {
+color: #ff4444;
+text-decoration: none;
+}
+.footer-contact .icon {
+margin-right: 8px;
+color: #ff4444;
+}
+.footer-bottom {
+margin-top: 4rem;
+padding-top: 2rem;
+border-top: 1px solid #222;
+text-align: center;
+font-size: 0.85rem;
+color: #888;
+}
+.footer-bottom a {
+color: #ff4444;
+text-decoration: none;
+}
+/* Responsive - Columnas en desktop */
+@media (min-width: 768px) {
+.footer-container {
+grid-template-columns: 1.2fr 2fr;
+gap: 4rem;
+}
+.footer-columns {
+grid-template-columns: repeat(3, 1fr);
+gap: 2rem;
+}
+.footer-section {
+padding: 80px 40px 40px;
+}
+}
+@media (min-width: 1024px) {
+.footer-container {
+grid-template-columns: 1.3fr 2.7fr;
+}
+}
+
+
+/*apartado de nuestros valores, equipo, certificado*/
+/* Estilos generales para secciones */
+section {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #007bff; /* Azul para títulos */
+}
+
+p {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* Iconos circulares */
+.icon-circle {
+    width: 60px;
+    height: 60px;
+    background-color: #e6f2ff; /* Azul claro */
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 15px;
+    font-size: 1.5rem; /* Tamaño de emoji */
+}
+
+
+
+/*contenedores cobertura servicios, zona atendemos */
+
+.coverage-header {
+            background-color: #27ae60;
+            color: white;
+            text-align: center;
+            padding: 60px 20px;
+        }
+
+        .coverage-header h1 {
+            font-size: 2.5em;
+            margin: 0 0 10px;
+        }
+
+        .coverage-header p {
+            font-size: 1.2em;
+            margin: 0;
+        }
+
+        .zones-section {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .zones-section h2 {
+            font-size: 2em;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .zones-section p {
+            color: #666;
+            margin-bottom: 10px;
+        }
+
+        .zones-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .zones-list {
+            flex: 1 1 60%;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .zones-list {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .zone-item {
+            background-color: #e8f5e9;
+            border-radius: 5px;
+            padding: 10px 15px;
+            font-size: 1em;
+            color: #333;
+            display: flex;
+            align-items: center;
+        }
+
+        .zone-item::before {
+            content: '✓';
+            color: #4caf50;
+            font-size: 1.2em;
+            margin-right: 10px;
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: transparent;
+            text-align: center;
+            line-height: 20px;
+        }
+
+        .map-container {
+            flex: 1 1 35%;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            .zones-container {
+                flex-direction: column;
+            }
+
+            .map-container {
+                margin-top: 20px;
+            }
+        }
+
+        .map-icon {
+            font-size: 3em;
+            color: #27ae60;
+            margin-bottom: 10px;
+        }
+
+        .map-container h3 {
+            font-size: 1.5em;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .map-container p {
+            color: #666;
+            margin-bottom: 10px;
+        }
+
+        .legend {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            margin: 10px 0;
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 5px;
+        }
+
+        .legend-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+
+        .green-dot {
+            background-color: #27ae60;
+        }
+
+        .blue-dot {
+            background-color: #2196f3;
+        }
+
+        .note {
+            background-color: #e3f2fd;
+            border-radius: 5px;
+            padding: 15px;
+            color: #333;
+            margin-top: 20px;
+            font-size: 0.9em;
+        }
+
+        .whatsapp-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #25d366;
+            color: white;
+            border-radius: 50px;
+            padding: 10px 20px;
+            font-size: 1em;
+            display: flex;
+            align-items: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+            text-decoration: none;
+        }
+
+        .whatsapp-button::before {
+            content: '💬';
+            margin-right: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .coverage-header {
+                padding: 40px 15px;
+            }
+
+            .coverage-header h1 {
+                font-size: 2em;
+            }
+
+            .coverage-header p {
+                font-size: 1em;
+            }
+
+            .zones-section h2 {
+                font-size: 1.8em;
+            }
+
+            .whatsapp-button {
+                bottom: 10px;
+                right: 10px;
+                padding: 8px 15px;
+            }
+        }
+
+
+
+
+        /*los 2 ultimos apartados */
+        .response-times {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+            text-align: center;
+        }
+
+        .response-times h2 {
+            font-size: 2em;
+            color: #333;
+            margin-bottom: 30px;
+        }
+
+        .times-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .time-card {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            padding: 20px;
+            flex: 1 1 250px;
+            max-width: 300px;
+            text-align: center;
+        }
+
+        .time-card .value {
+            font-size: 2em;
+            color: #27ae60;
+            margin-bottom: 10px;
+        }
+
+        .time-card .description {
+            font-size: 1em;
+            color: #666;
+        }
+
+        .no-zone-section {
+            background-color: #27ae60;
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        .no-zone-section h2 {
+            font-size: 2em;
+            margin: 0 0 20px;
+        }
+
+        .no-zone-section p {
+            font-size: 1.2em;
+            margin: 0 0 30px;
+        }
+
+        .consult-button {
+            background-color: #fff;
+            color: #333;
+            border: none;
+            border-radius: 5px;
+            padding: 15px 30px;
+            font-size: 1.2em;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .consult-button:hover {
+            background-color: #f0f0f0;
+        }
+
+        .whatsapp-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #25d366;
+            color: white;
+            border-radius: 50px;
+            padding: 10px 20px;
+            font-size: 1em;
+            display: flex;
+            align-items: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+            text-decoration: none;
+        }
+
+        .whatsapp-button::before {
+            content: '💬';
+            margin-right: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .response-times h2 {
+                font-size: 1.8em;
+            }
+
+            .times-container {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .time-card {
+                max-width: none;
+            }
+
+            .no-zone-section h2 {
+                font-size: 1.8em;
+            }
+
+            .no-zone-section p {
+                font-size: 1em;
+            }
+
+            .consult-button {
+                padding: 12px 25px;
+                font-size: 1em;
+            }
+
+            
+        }
+.container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Header */
+        .header {
+            background-color: #007bff;
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            font-size: 1.2em;
+        }
+
+        /* Sección principal - Responsive con flexbox */
+        .contact-section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-top: 40px;
+        }
+
+        .contact-info,
+        .contact-form {
+            flex: 1 1 100%; /* Por defecto, full width en mobile */
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        /* Para pantallas mayores a 768px, divide en columnas */
+        @media (min-width: 768px) {
+            .contact-info {
+                flex: 1 1 45%;
+                margin-right: 20px;
+                margin-bottom: 0;
+            }
+
+            .contact-form {
+                flex: 1 1 50%;
+            }
+        }
+
+        /* Información de Contacto */
+        .contact-info h2 {
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            color: #007bff;
+        }
+
+        .info-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            padding: 15px;
+            background-color: #e9f7ff;
+            border-radius: 8px;
+        }
+
+        .info-item i {
+            font-size: 2em;
+            margin-right: 15px;
+            color: #007bff;
+        }
+
+        .info-item.green i {
+            color: #28a745;
+        }
+
+        .info-item.purple i {
+            color: #6f42c1;
+        }
+
+        .info-item.orange i {
+            color: #fd7e14;
+        }
+
+        .info-item.blue i {
+            color: #17a2b8;
+        }
+
+        .info-item a {
+            color: #333;
+            text-decoration: none;
+        }
+
+        .info-item a:hover {
+            text-decoration: underline;
+        }
+
+        .info-item p {
+            margin: 0;
+            font-size: 1em;
+        }
+
+        .info-item small {
+            display: block;
+            color: #666;
+            font-size: 0.9em;
+        }
+
+        /* Formulario */
+        .contact-form h2 {
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            color: #007bff;
+        }
+
+        .contact-form form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .contact-form label {
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        .contact-form input,
+        .contact-form select,
+        .contact-form textarea {
+            margin-bottom: 15px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 1em;
+        }
+
+        .contact-form button {
+            background-color: #007bff;
+            color: white;
+            padding: 15px;
+            border: none;
+            border-radius: 4px;
+            font-size: 1.1em;
+            cursor: pointer;
+        }
+
+        .contact-form button:hover {
+            background-color: #0056b3;
+        }
+
+
+
+
+        .location-section {
+      min-height: 70vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    .location-title {
+      font-size: 2.4rem;
+      font-weight: bold;
+      color: #222;
+      margin-bottom: 50px;
+    }
+
+    .location-icon {
+      font-size: 6.5rem;
+      color: #e74c3c;          /* rojo característico del sitio */
+      margin-bottom: 30px;
+    }
+
+    .address {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: #333;
+      margin-bottom: 12px;
+    }
+
+    .secondary-text {
+      font-size: 1.1rem;
+      color: #666;
+      max-width: 380px;
+      margin: 0 auto;
+    }
+
+    /* Responsive - ajustes para móviles pequeños */
+    @media (max-width: 480px) {
+      .location-title {
+        font-size: 2rem;
+      }
+      .location-icon {
+        font-size: 5.5rem;
+      }
+      .address {
+        font-size: 1.35rem;
+      }
+      .secondary-text {
+        font-size: 1rem;
+      }
+    }
+
+    /* Barra superior fija ROJA - Versión exacta como en cobertura.html */
+.top-barrr {
+    background-color: #cc0000;           /* rojo intenso del sitio */
+    color: white;
+    font-size: 13.5px;                   /* tamaño similar al de la referencia */
+    font-weight: 500;
+    padding: 6px 0;                      /* poco padding vertical */
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1200;
+    display: flex;
+    justify-content: space-between;      /* clave: teléfono izquierda, horario derecha */
+    align-items: center;
+    box-sizing: border-box;
+}
+
+/* Contenedor interno para centrar y separar contenido */
+.top-barrr .container-bar {
+    width: 100%;
+    max-width: 1400px;                   /* como en sitios profesionales */
+    margin: 0 auto;
+    padding: 0 15px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 30px;
+}
+
+/* Texto del teléfono (izquierda) */
+.top-barrr .contact-info {
+    flex: none;
+    text-align: left;
+    color: black;
+    height: 10px;
+    background: #cc0000
+}
+
+/* Horario (derecha) */
+.top-barrr .schedule {
+    flex: 1;
+    text-align: right;
+    font-size: 13px;
+    white-space: nowrap;
+}
+
+/* Ajuste para móviles pequeños */
+@media (max-width: 600px) {
+    .top-barrr {
+        font-size: 12.5px;
+        padding: 5px 0;
+    }
+    
+    .top-barrr .container-bar {
+        padding: 0 12px;
+        flex-direction: column;
+        gap: 3px;
+    }
+    
+    .top-barrr .contact-info,
+    .top-barrr .schedule {
+        text-align: center;
+        width: 100%;
+    }
+}
+
+/* Ajuste del body y header para que no se superpongan */
+body {
+    padding-top: 36px;                   /* altura aproximada de la barra roja */
+    margin: 0;
+}
+
+header {
+    position: fixed;
+    top: 36px;                           /* justo debajo de la barra roja */
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1100;
+    background: white;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+}
+
+/* En pantallas más grandes */
+@media (min-width: 768px) {
+    .top-barrr {
+        padding: 8px 0;
+        font-size: 14.5px;
+    }
+    
+    body {
+        padding-top: 40px;
+    }
+    
+    header {
+        top: 40px;
+    }
+}
+
+/* Ajuste principal: espacio para barra roja + header fijo */
+body {
+    padding-top: 110px;          /* ~36px barra roja + ~74px header */
+    margin: 0;
+}
+
+/* Header fijo (logo + menú) */
+header {
+    position: fixed;
+    top: 36px;                   /* justo debajo de la barra roja */
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1100;
+    background: white;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+    padding: 12px 16px;
+}
+
+/* Sección azul "Contáctanos" - ahora con margen superior suficiente */
+.header {
+    background-color: #007bff;
+    color: white;
+    text-align: center;
+    padding: 70px 20px 50px;     /* más espacio arriba para bajar visualmente */
+    margin-top: 0;               /* sin margen negativo */
+}
+
+/* Ajuste para que en móvil se vea bien */
+@media (max-width: 768px) {
+    .header {
+        padding: 90px 15px 40px; /* más espacio arriba en móvil */
+    }
+    
+    body {
+        padding-top: 100px;      /* ajusta si la barra/header es más alta en móvil */
+    }
+}
+
+/* Opcional: si quieres más separación general en todas las secciones */
+.container {
+    padding-top: 20px;           /* espacio extra después del header azul */
+}

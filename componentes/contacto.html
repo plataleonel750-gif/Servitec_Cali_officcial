@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Servicio Técnico Especializado en Cali</title>
+<link rel="stylesheet" href="contacto.css">
+</head>
+<body>
+
+ <!-- Barra superior fija ROJA - como en la primera imagen -->
+<div class="top-barrr">
+    <div class="container-bar">
+        <div class="contact-info">☎ 3151144835• Cali, Colombia</div>
+       
+    </div>
+</div>
+
+<!-- Header fijo -->
+<header>
+        
+<div class="logo">
+<div class="logo-square">ST</div>
+<div class="logo-text">Servitec Cali<br></div>
+</div>
+<input type="checkbox" id="menu-toggle" class="menu-toggle">
+<!-- Menú hamburguesa (mobile) -->
+<label for="menu-toggle" class="hamburger">☰</label>
+<!-- Navegación desktop -->
+<nav class="desktop-nav">
+<ul>
+<li><a href="../index.html">Inicio</a></li>
+<li><a href="/componentes/neveras.html">Neveras</a></li>
+<li><a href="/componentes/lavadoras.html">Lavadoras</a></li>
+<li><a href="/componentes/secadora.html">Secadoras</a></li>
+<li><a href="/componentes/airCondicionado.html">Aires Acondicionados</a></li>
+<li><a href="/componentes/sobreNosotros.html">Sobre Nosotros</a></li>
+<li><a href="/componentes/cobertura.html">Cobertura</a></li>
+<li><a href="/componentes/blog.html">Blog</a></li>
+<li><a href="/componentes/contacto.html">Contacto</a></li>
+</ul>
+</nav>
+<nav class="mobile-nav">
+<ul>
+<li><a href="../index.html">Inicio</a></li>
+<li><a href="/componentes/neveras.html">Neveras</a></li>
+<li><a href="/componentes/lavadoras.html">Lavadoras</a></li>
+<li><a href="/componentes/secadora.html">Secadoras</a></li>
+<li><a href="/componentes/airCondicionado.html">Aires Acondicionados</a></li>
+<li><a href="/componentes/sobreNosotros.html">Sobre Nosotros</a></li>
+<li><a href="/componentes/cobertura.html">Cobertura</a></li>
+<li><a href="/componentes/blog.html">Blog</a></li>
+<li><a href="/componentes/contacto.html">Contacto</a></li>
+</ul>
+</nav>
+</header>
+
+<!-- Botón WhatsApp flotante -->
+<a href="https://wa.me/573151144835?text=Hola%21%20Necesito%20servicio%20t%C3%A9cnico%20para%20mi%20nevera%20LG" class="whatsapp-float">
+        WhatsApp
+</a>
+
+
+<div class="container">
+        <section class="header">
+            <h1>Contáctanos</h1>
+            <p id="contacto">Estamos listos para ayudarte con tu electrodoméstico</p>
+        </section>
+
+        <section class="contact-section">
+            <!-- Información de Contacto (Izquierda) -->
+            <div class="contact-info">
+                <h2>Información de Contacto</h2>
+               
+                <div class="info-item green">
+                    
+                  
+                    <img  class="icono" src="/img/social.png" alt="">
+                    
+                    <div  id="whap">
+                        <a href="https://wa.me/573151144835" target="_blank" >
+                          <p>Respuesta inmediata </p> 
+                          <p> Enviar mensaje </p>
+                          
+                          
+                         
+                        </a>
+                        
+                      
+                    </div>
+                </div>
+
+                <div class="info-item purple">
+                      <img  class="icono" src="/img/email.png" alt="">
+                    <div id="email">
+                        <a href="mailto:info@serviciotecnicolg.com">info@serviciotecnicolg.com <small>Respuesta en 24 horas</small></a>
+                        
+                    </div>
+                </div>
+                <div class="info-item orange">
+                     <img  class="icono" src="/img/mapa.png" alt="">
+                    <div id="direccion">
+                        <p>Calle 50 #45-30</p>
+                        <small>Medellín, Antioquia</small>
+                    </div>
+                </div>
+                <div class="info-item blue">
+                   <img  class="icono" src="/img/horario-de-trabajo.png" alt="">
+                    <div id="horario">
+                        <p>Horario de Atención</p>
+                        <small>Lunes a Sábado<br>8:00 AM - 6:00 PM<br>Domingos y festivos cerrado</small>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Envíanos un Mensaje (Derecha) -->
+            <div class="contact-form">
+                <h2>Envíanos un Mensaje</h2>
+                <form action="mailto:info@serviciotecnicolg.com" method="post" enctype="text/plain">
+                    <label for="name">Nombre completo *</label>
+                    <input type="text" id="name" name="Nombre" placeholder="Tu nombre" required>
+
+                    <label for="phone">Teléfono *</label>
+                    <input type="tel" id="phone" name="Telefono" placeholder="3151144835" required>
+
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="Email" placeholder="tu@email.com">
+
+                    <label for="appliance">Electrodoméstico *</label>
+                    <select id="appliance" name="Electrodomestico" required>
+                        <option value="">Selecciona un electrodoméstico</option>
+                        <option value="nevera">Nevera</option>
+                        <option value="lavadora">Lavadora</option>
+                        <option value="estufa">Estufa</option>
+                        <option value="secadora">Secadora</option>
+                        <option value="aire_acondicionado">Aire Acondicionado</option>
+                    </select>
+
+                    <label for="problem">Describe el problema *</label>
+                    <textarea id="problem" name="Problema" placeholder="Cuéntanos qué está pasando con tu electrodoméstico..." rows="5" required></textarea>
+
+                    <button type="submit">Enviar Solicitud</button>
+                </form>
+               
+            </div>
+        </section>
+    </div>
+
+<section class="location-section">
+    <h1 class="location-title">Ubicación</h1>
+    
+    <i class="fas fa-map-marker-alt location-icon"></i>
+    
+    <div class="address">
+    Avenida 6 NORTE # 52-24, ★CALI 
+    </div>
+    
+    <p class="secondary-text">
+      Área Metropolitana de Cali
+    </p>
+  </section>
+
+<footer>
+<div class="footer-container">
+<!-- Columna 1: Logo + descripción -->
+<div class="footer-logo">
+<div>
+<span class="logo-square">ST</span>
+<span class="footer-logo-text">Servitec Cali</span>
+</div>
+
+<p>Servicio técnico especializado en electrodomésticos en Cali. Más de 10 años de experiencia.</p>
+</div>
+<!-- Columnas de enlaces -->
+<div class="footer-columns">
+<div class="footer-col">
+<h4>Servicios</h4>
+<ul>  
+    <li>
+                <a href="/componentes/neveras.html">Reparación de Neveras</a>
+              </li>
+              <li>
+                <a href="/componentes/lavadoras.html"
+                  >Reparación de Lavadoras</a
+                >
+              </li>
+              <li><a href="#">Reparación de Estufas</a></li>
+              <li>
+                <a href="/componentes/secadora.html">Reparación de Secadoras</a>
+              </li>
+              <li>
+                <a href="/componentes/airCondicionado.html"
+                  >Reparación de Aires Acondicionados</a
+                >
+              </li>
+</ul>
+</div>
+<div class="footer-col">
+<h4>Empresa</h4>
+<ul>
+    <li>
+                <a href="/componentes/sobreNosotros.html">Sobre Nosotros</a>
+              </li>
+              <li><a href="#">Cobertura</a></li>
+              <li><a href="/componentes/blog.html">Blog</a></li>
+              <li><a href="/componentes/contacto.html">Contacto</a></li>
+</ul>
+</div>
+<div class="footer-col footer-contact">
+<h4>Contacto</h4>
+<p><span class="icon">☎</span> 3151144835</p>
+<p><span class="icon">✉</span> <a href="mailto:info@serviciotecnicolg.com">info@serviciotecnicolg.com</a></p>
+<p><span class="icon">📍</span> Avenida 6 NORTE # 52-24, ★CALI </p>
+<p><span class="icon">🕒</span> Lun - Sáb: 8:00 AM - 6:00 PM</p>
+</div>
+</div>
+</div>
+<!-- Pie final 
+<div class="footer-bottom">
+<p>Somos un servicio técnico independiente no oficial. No estamos afiliados ni autorizados por lg. Todos los nombres de marcas y modelos son utilizados únicamente con fines informativos.</p>
+<p>© 2025 Servicio Técnico Especializado lg Medellín. Todos los derechos reservados.</p>
+</div>-->
+</footer>
+</body>
+</html>

@@ -1,0 +1,642 @@
+/* Reset básico */
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+body {
+font-family: Arial, Helvetica, sans-serif;
+background-color: #fff;
+color: #333;
+}
+/* Altura aproximada actual de tu header fijo (ajusta si cambias paddings) */
+:root {
+    --header-height: 110px;   /* ~36px top-bar + ~74px header (ajusta según tu diseño) */
+}
+
+/* Espacio para que el contenido no quede debajo del header fijo */
+body {
+    padding-top: var(--header-height);
+    /* ... resto de tus estilos ... */
+}
+
+/* Opcional: versión más específica (recomendada) */
+.about-section {
+    padding-top: calc(var(--header-height) + 40px); /* espacio extra + padding original */
+    padding-bottom: 60px;
+    min-height: 50vh; /* para que ocupe buena parte de la pantalla como en la captura */
+}
+
+/* Si prefieres aplicar el espacio a todas las sections */
+section {
+    padding-top: calc(var(--header-height) + 40px);
+    padding-bottom: 80px;
+}
+/* Barra roja superior fija */
+.top-bar {
+background-color: #cc0000;
+color: white;
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 8px 16px;
+font-size: 13px;
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+z-index: 1000;
+}
+/* Header fijo debajo de la barra roja */
+header {
+background-color: white;
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 12px 16px;
+box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+position: fixed;
+top: 36px; /* altura aproximada de .top-bar */
+left: 0;
+width: 100%;
+z-index: 999;
+}
+.logo {
+display: flex;
+align-items: center;
+gap: 10px;
+}
+.logo-square {
+background-color: #cc0000;
+color: white;
+font-size: 22px;
+font-weight: bold;
+width: 38px;
+height: 38px;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+.logo-text {
+font-size: 15px;
+font-weight: bold;
+line-height: 1.1;
+}
+/* Menú hamburguesa y navegación mobile */
+.menu-toggle { display: none; }
+.hamburger {
+font-size: 28px;
+cursor: pointer;
+color: #333;
+}
+.mobile-nav {
+display: none;
+position: fixed;
+top: 80px; /* debajo del header */
+left: 0;
+width: 100%;
+background: white;
+padding: 20px;
+box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+z-index: 998;
+}
+.mobile-nav ul {
+list-style: none;
+}
+.mobile-nav a {
+display: block;
+padding: 12px 0;
+color: #333;
+text-decoration: none;
+font-size: 16px;
+}
+#menu-toggle:checked ~ .mobile-nav {
+display: block;
+}
+/* Navegación desktop */
+.desktop-nav {
+display: none;
+}
+
+/* Botón WhatsApp flotante */
+.whatsapp-float {
+position: fixed;
+bottom: 20px;
+right: 20px;
+background-color: #25D366;
+color: white;
+padding: 12px 20px;
+border-radius: 50px;
+text-decoration: none;
+font-weight: bold;
+box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+z-index: 1000;
+display: flex;
+align-items: center;
+gap: 8px;
+font-size: 1rem;
+}
+.whatsapp-float::before {
+content: "💬";
+}
+/* Media Queries */
+@media (min-width: 769px) {
+.top-bar {
+padding: 10px 40px;
+font-size: 15px;
+}
+header {
+padding: 15px 40px;
+top: 42px;
+}
+.logo-square {
+width: 48px;
+height: 48px;
+font-size: 26px;
+}
+.logo-text {
+font-size: 18px;
+}
+.desktop-nav {
+display: flex;
+}
+.desktop-nav ul {
+display: flex;
+list-style: none;
+gap: 28px;
+}
+.desktop-nav a {
+color: #0f2d5e;
+text-decoration: none;
+font-weight: 500;
+}
+.hamburger {
+display: none;
+}
+.hero-section {
+padding: 160px 60px 80px;
+}
+.hero-section h1 {
+font-size: 3.2rem;
+}
+.hero-section p {
+font-size: 1.3rem;
+max-width: 600px;
+}
+.features {
+flex-direction: row;
+flex-wrap: wrap;
+gap: 1.5rem;
+}
+}
+/* Espacio general para header fijo (ajusta según tu top-bar + header) */
+section {
+padding: 120px 20px 80px; /* más espacio arriba y abajo */
+}
+h2 {
+text-align: center;
+font-size: 2.3rem;
+margin-bottom: 3rem; /* más separación debajo del título */
+font-weight: bold;
+}
+
+
+/*secion de sobre nosotros e historia*/
+
+.container {
+            max-width: 100%;
+            padding: 0 15px;
+            margin: 0 auto;
+        }
+
+        /* Sobre Nosotros Section */
+        .about-section {
+            background-color: #007bff; /* Blue background from image */
+            color: white;
+            text-align: center;
+            padding: 40px 0;
+        }
+
+        .about-section h1 {
+            font-size: 2rem;
+            margin: 0 0 10px;
+            font-weight: bold;
+        }
+
+        .about-section p {
+            font-size: 1.1rem;
+            margin: 0;
+        }
+
+        /* Nuestra Historia Section */
+        .history-section {
+            background-color: white;
+            padding: 40px 0;
+        }
+
+        .history-section h2 {
+            font-size: 1.8rem;
+            color: #343a40; /* Dark gray/blue from image */
+            margin: 0 0 20px;
+            font-weight: bold;
+        }
+
+        .history-wrapper {
+            display: flex;
+            flex-direction: column; /* Stack vertically on mobile */
+        }
+
+        .history-text {
+            font-size: 1rem;
+            color: #6c757d; /* Gray text from image */
+        }
+
+        .history-text p {
+            margin: 0 0 15px;
+        }
+
+        .history-image {
+            position: relative;
+            margin-top: 20px;
+        }
+
+        .history-image img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px; /* Slight rounding as per image card */
+        }
+
+
+        
+
+      
+
+        /* Media query for larger screens (tablet/desktop) */
+        @media (min-width: 768px) {
+            .container {
+                max-width: 1200px;
+                padding: 0 30px;
+            }
+
+            .about-section {
+                padding: 60px 0;
+            }
+
+            .about-section h1 {
+                font-size: 3rem;
+            }
+
+            .about-section p {
+                font-size: 1.4rem;
+            }
+
+            .history-section {
+                padding: 60px 0;
+            }
+
+            .history-section h2 {
+                font-size: 2.5rem;
+            }
+
+            .history-wrapper {
+                flex-direction: row; /* Side by side on larger screens */
+                align-items: flex-start;
+                gap: 30px;
+            }
+
+            .history-text {
+                flex: 1;
+                padding-right: 20px;
+            }
+
+            .history-image {
+                flex: 1;
+                margin-top: 0;
+            }
+
+            .whatsapp-btn {
+                bottom: 20px;
+                right: 20px;
+            }
+        }
+
+/*boton llamada */
+.btn-call {
+    /* Reset básico */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: white;
+    background: #25D366;          /* verde WhatsApp - también puedes usar #00B341 o #E53935 (rojo) */
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    padding: 14px 28px;
+    border-radius: 50px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.25);
+    
+    /* Tamaño y toque amigable para móviles */
+    min-height: 56px;           /* mínimo recomendado para toque */
+    min-width: 180px;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+    
+    transition: all 0.2s ease;
+  }
+
+  .btn-call:hover,
+  .btn-call:active {
+    background: #20b858;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+  }
+
+  .btn-call:active {
+    transform: scale(0.97);
+  }
+
+  /* Icono de teléfono (opcional pero recomendado) */
+  .btn-call::before {
+    content: "📞 ";
+    font-size: 1.2em;
+    margin-right: 8px;
+  }
+
+  /* Para pantallas pequeñas */
+  @media (max-width: 480px) {
+    .btn-call {
+      font-size: 1.15rem;
+      padding: 16px 32px;
+      width: 100%;
+      max-width: 320px;
+      margin: 0 auto;
+    }
+  }
+
+
+/*foother*/
+footer {
+background: #0f0f0f;
+color: #ccc;
+padding: 60px 20px 30px;
+}
+.footer-container {
+max-width: 1200px;
+margin: 0 auto;
+display: grid;
+grid-template-columns: 1fr;
+gap: 3rem;
+}
+.footer-logo {
+margin-bottom: 1.5rem;
+}
+.footer-logo .logo-square {
+display: inline-block;
+background: #cc0000;
+color: white;
+font-size: 1.8rem;
+font-weight: bold;
+width: 50px;
+height: 50px;
+line-height: 50px;
+text-align: center;
+border-radius: 4px;
+margin-right: 10px;
+}
+.footer-logo-text {
+font-size: 1.4rem;
+font-weight: bold;
+color: white;
+}
+.footer-logo p {
+margin-top: 0.8rem;
+font-size: 0.95rem;
+color: #aaa;
+line-height: 1.5;
+}
+.footer-columns {
+display: grid;
+grid-template-columns: 1fr;
+gap: 2.5rem;
+}
+.footer-col h4 {
+color: white;
+font-size: 1.2rem;
+margin-bottom: 1.2rem;
+font-weight: 600;
+}
+.footer-col ul {
+list-style: none;
+}
+.footer-col li {
+margin-bottom: 0.9rem;
+}
+.footer-col a {
+color: #bbb;
+text-decoration: none;
+font-size: 0.95rem;
+transition: color 0.3s;
+}
+.footer-col a:hover {
+color: #ff4444;
+}
+.footer-contact p {
+font-size: 0.95rem;
+margin-bottom: 0.8rem;
+color: #bbb;
+}
+.footer-contact a {
+color: #ff4444;
+text-decoration: none;
+}
+.footer-contact .icon {
+margin-right: 8px;
+color: #ff4444;
+}
+.footer-bottom {
+margin-top: 4rem;
+padding-top: 2rem;
+border-top: 1px solid #222;
+text-align: center;
+font-size: 0.85rem;
+color: #888;
+}
+.footer-bottom a {
+color: #ff4444;
+text-decoration: none;
+}
+/* Responsive - Columnas en desktop */
+@media (min-width: 768px) {
+.footer-container {
+grid-template-columns: 1.2fr 2fr;
+gap: 4rem;
+}
+.footer-columns {
+grid-template-columns: repeat(3, 1fr);
+gap: 2rem;
+}
+.footer-section {
+padding: 80px 40px 40px;
+}
+}
+@media (min-width: 1024px) {
+.footer-container {
+grid-template-columns: 1.3fr 2.7fr;
+}
+}
+
+
+/*apartado de nuestros valores, equipo, certificado*/
+/* Estilos generales para secciones */
+section {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #007bff; /* Azul para títulos */
+}
+
+p {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* Iconos circulares */
+.icon-circle {
+    width: 60px;
+    height: 60px;
+    background-color: #e6f2ff; /* Azul claro */
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 15px;
+    font-size: 1.5rem; /* Tamaño de emoji */
+}
+
+/* Sección Nuestros Valores */
+.valores-section {
+    background-color: #fff;
+}
+
+.valores-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.valor-card {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Sección Nuestro Equipo */
+.equipo-section {
+    background-color: #fff;
+}
+
+.equipo-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.equipo-card {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Sección Certificaciones y Experiencia */
+.certificaciones-section {
+    background-color: #007bff; /* Azul de fondo */
+    color: #fff;
+}
+
+.certificaciones-section h2 {
+    color: #fff;
+}
+
+.certificaciones-section p {
+    color: #fff;
+    margin-bottom: 30px;
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.stats-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.stat-card {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.stat-card h3 {
+    font-size: 2rem;
+    color: #fff;
+}
+
+.stat-card p {
+    color: #fff;
+}
+
+/* Media Queries para tablets y desktops */
+@media (min-width: 768px) {
+    .valores-grid,
+    .equipo-grid,
+    .stats-grid {
+        flex-direction: row;
+        justify-content: center;
+        gap: 30px;
+    }
+
+    .valor-card,
+    .equipo-card,
+    .stat-card {
+        flex: 1;
+        max-width: 250px;
+    }
+
+    section {
+        padding: 60px 40px;
+    }
+
+    h2 {
+        font-size: 2.2rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .valores-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .equipo-grid,
+    .stats-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+#nosotros{
+    color: white;
+}
