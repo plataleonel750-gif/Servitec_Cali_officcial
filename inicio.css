@@ -12,7 +12,7 @@
 
         /* Barra roja superior */
         .top-bar {
-            background-color: #cc0000; /* Rojo similar al de la imagen */
+            background-color: #b8d100; 
             color: #fff;
             display: flex;
             justify-content: space-between;
@@ -57,7 +57,7 @@
         }
 
         .logo-square {
-            background-color: #cc0000;
+            background-color: #b8d100;
             color: #fff;
             font-size: 24px;
             font-weight: bold;
@@ -722,7 +722,7 @@
        SECCIÓN INFORMACIÓN DE CONTACTO (fondo rojo)
     ======================= */
     .contact-info-section {
-      background-color: #c8102e; /* Rojo característico */
+      background-color: #b8d100; /* Rojo característico */
       color: white;
       padding: 50px 20px 40px;
       text-align: center;
@@ -815,7 +815,7 @@
     }
 
     .footer-logo span {
-      color: #c8102e;
+      color: white;
     }
 
     .footer-text {
@@ -933,7 +933,7 @@ footer {
 
     .footer-logo .logo-square {
       display: inline-block;
-      background: #cc0000;
+      background: #b8d100;
       color: white;
       font-size: 1.8rem;
       font-weight: bold;

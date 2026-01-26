@@ -13,7 +13,7 @@
 
         /* Barra roja superior fija */
         .top-bar {
-            background-color: #cc0000;
+            background-color: #b8d100;
             color: white;
             display: flex;
             justify-content: space-between;
@@ -49,7 +49,7 @@
         }
 
         .logo-square {
-            background-color: #cc0000;
+            background-color: #b8d100;
             color: white;
             font-size: 22px;
             font-weight: bold;
@@ -109,7 +109,7 @@
 
         /* Sección principal - Cuadro rojo */
         .hero-section {
-            background-color: #a50000; /* rojo más oscuro y elegante */
+            background-color: #b8d100; 
             color: white;
             padding: 140px 20px 60px; /* espacio para header fijo + margen inferior */
             text-align: left;
@@ -712,7 +712,7 @@
 
     /*formulario*/
     .form-section {
-      background: rgb(196, 22, 22);
+      background: #b8d100;
       padding: 100px 16px 80px; /* espacio para header fijo */
       min-height: 100vh;
     }
@@ -842,7 +842,7 @@
 
     .footer-logo .logo-square {
       display: inline-block;
-      background: #cc0000;
+      background: #b8d100;
       color: white;
       font-size: 1.8rem;
       font-weight: bold;

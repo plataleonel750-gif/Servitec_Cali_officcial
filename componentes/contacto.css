@@ -63,7 +63,7 @@ align-items: center;
 gap: 10px;
 }
 .logo-square {
-background-color: #cc0000;
+background-color: #b8d100;
 color: white;
 font-size: 22px;
 font-weight: bold;
@@ -225,7 +225,7 @@ margin-bottom: 1.5rem;
 }
 .footer-logo .logo-square {
 display: inline-block;
-background: #cc0000;
+background: #b8d100;
 color: white;
 font-size: 1.8rem;
 font-weight: bold;
@@ -688,7 +688,7 @@ p {
 
         /* Header */
         .header {
-            background-color: #007bff;
+            background-color: #b8d100;
             color: white;
             text-align: center;
             padding: 40px 20px;
@@ -891,7 +891,7 @@ p {
 
     /* Barra superior fija ROJA - Versión exacta como en cobertura.html */
 .top-barrr {
-    background-color: #cc0000;           /* rojo intenso del sitio */
+    background-color: #b8d100;           /* rojo intenso del sitio */
     color: white;
     font-size: 13.5px;                   /* tamaño similar al de la referencia */
     font-weight: 500;
@@ -925,9 +925,9 @@ p {
 .top-barrr .contact-info {
     flex: none;
     text-align: left;
-    color: black;
+    color: white;
     height: 10px;
-    background: #cc0000
+    background: #b8d100;
 }
 
 /* Horario (derecha) */
@@ -1012,7 +1012,7 @@ header {
 
 /* Sección azul "Contáctanos" - ahora con margen superior suficiente */
 .header {
-    background-color: #007bff;
+    background-color: #b8d100;
     color: white;
     text-align: center;
     padding: 70px 20px 50px;     /* más espacio arriba para bajar visualmente */

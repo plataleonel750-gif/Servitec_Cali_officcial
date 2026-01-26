@@ -11,7 +11,7 @@ color: #333;
 }
 /* Barra roja superior fija */
 .top-bar {
-background-color: #cc0000;
+background-color: #b8d100;
 color: white;
 display: flex;
 justify-content: space-between;
@@ -44,7 +44,7 @@ align-items: center;
 gap: 10px;
 }
 .logo-square {
-background-color: #cc0000;
+background-color: #b8d100;
 color: white;
 font-size: 22px;
 font-weight: bold;
@@ -96,7 +96,7 @@ display: none;
 }
 /* Sección principal - Cuadro rojo */
 .hero-section {
-background-color:rgba(13, 49, 209, 0.712); /* rojo más oscuro y elegante */
+background-color:#b8d100; /* rojo más oscuro y elegante */
 color: white;
 padding: 140px 20px 60px; /* espacio para header fijo + margen inferior */
 text-align: left;
@@ -432,7 +432,7 @@ font-size: 1.15rem;
   }
 /*formulario*/
 .form-section {
-background: rgba(13, 49, 209, 0.712);
+background: #b8d100;
 padding: 100px 16px 80px; /* espacio para header fijo */
 min-height: 100vh;
 }
@@ -541,7 +541,7 @@ margin-bottom: 1.5rem;
 }
 .footer-logo .logo-square {
 display: inline-block;
-background: #cc0000;
+background: #b8d100;
 color: white;
 font-size: 1.8rem;
 font-weight: bold;

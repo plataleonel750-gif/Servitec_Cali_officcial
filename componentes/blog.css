@@ -33,7 +33,7 @@ section {
 }
 /* Barra roja superior fija */
 .top-bar {
-background-color: #cc0000;
+background-color: #b8d100;
 color: white;
 display: flex;
 justify-content: space-between;
@@ -66,7 +66,7 @@ align-items: center;
 gap: 10px;
 }
 .logo-square {
-background-color: #cc0000;
+background-color: #b8d100;
 color: white;
 font-size: 22px;
 font-weight: bold;
@@ -228,7 +228,7 @@ margin-bottom: 1.5rem;
 }
 .footer-logo .logo-square {
 display: inline-block;
-background: #cc0000;
+background: #b8d100;
 color: white;
 font-size: 1.8rem;
 font-weight: bold;
@@ -360,7 +360,7 @@ p {
 }
 /* Banner de Blog y Consejos (mobile-first: centrado, padding ajustado) */
         .blog-header {
-            background: linear-gradient(to right, #6A1B9A, #AB47BC); /* Morado gradiente */
+            background: #b8d100; /* Morado gradiente */
             color: #fff;
             text-align: center;
             padding: 40px 20px;

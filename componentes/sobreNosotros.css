@@ -34,7 +34,7 @@ section {
 }
 /* Barra roja superior fija */
 .top-bar {
-background-color: #cc0000;
+background-color: #b8d100;
 color: white;
 display: flex;
 justify-content: space-between;
@@ -67,7 +67,7 @@ align-items: center;
 gap: 10px;
 }
 .logo-square {
-background-color: #cc0000;
+background-color: #b8d100;
 color: white;
 font-size: 22px;
 font-weight: bold;
@@ -211,7 +211,7 @@ font-weight: bold;
 
         /* Sobre Nosotros Section */
         .about-section {
-            background-color: #007bff; /* Blue background from image */
+            background-color: #b8d100; /* Blue background from image */
             color: white;
             text-align: center;
             padding: 40px 0;
@@ -393,7 +393,7 @@ margin-bottom: 1.5rem;
 }
 .footer-logo .logo-square {
 display: inline-block;
-background: #cc0000;
+background: #b8d100;
 color: white;
 font-size: 1.8rem;
 font-weight: bold;
@@ -562,7 +562,7 @@ p {
 
 /* Sección Certificaciones y Experiencia */
 .certificaciones-section {
-    background-color: #007bff; /* Azul de fondo */
+    background-color: #b8d100; /* Azul de fondo */
     color: #fff;
 }
 
